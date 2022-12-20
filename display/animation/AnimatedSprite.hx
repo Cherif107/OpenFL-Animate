@@ -1,6 +1,5 @@
 package display.animation;
 
-import AnimationController.Frame;
 import flixel.FlxSprite;
 import flixel.graphics.frames.FlxFrame;
 import flixel.graphics.frames.FlxFramesCollection;
@@ -57,16 +56,16 @@ class AnimatedSprite extends Sprite {
             frames.push(new Frame(frame.name, frame.paint()));
         return new AnimatedSprite(frames);
 	}
-    public static function fromSparrow(sparrowPath:String):AnimatedSprite{ // forgive me for these
-		return AnimatedSprite.fromFramesCollection(AssetPaths.sparrow_atlas(sparrowPath));
+    public static function fromSparrow(image:String, path:String):AnimatedSprite{ // forgive me for these
+		return AnimatedSprite.fromFramesCollection(image, path);
     }
-	public static function fromSpriteSheetPacker(sparrowPath:String):AnimatedSprite {
-		return AnimatedSprite.fromFramesCollection(AssetPaths.packer_atlas(sparrowPath));
+	public static function fromSpriteSheetPacker(image:String, path:String):AnimatedSprite {
+		return AnimatedSprite.fromFramesCollection(image, path);
 	}
-	public static function fromTexturePackerXml(sparrowPath:String):AnimatedSprite {
-		return AnimatedSprite.fromFramesCollection(AssetPaths.texture_packer(sparrowPath));
+	public static function fromTexturePackerXml(image:String, path:String):AnimatedSprite {
+		return AnimatedSprite.fromFramesCollection(image, path);
 	}
-	public static function fromTexturePackerJson(sparrowPath:String):AnimatedSprite {
-		return AnimatedSprite.fromFramesCollection(AssetPaths.texture_packerJSON(sparrowPath));
+	public static function fromTexturePackerJson(image:String, path:String):AnimatedSprite {
+		return AnimatedSprite.fromFramesCollection(image, path);
 	}
 }
