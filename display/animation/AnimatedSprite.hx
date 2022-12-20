@@ -1,5 +1,6 @@
 package display.animation;
 
+import display.animation.AnimationController.Frame;
 import flixel.FlxSprite;
 import flixel.graphics.frames.FlxFrame;
 import flixel.graphics.frames.FlxFramesCollection;
